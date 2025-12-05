@@ -1,0 +1,36 @@
+{
+  "name": "espeak-for-vscode",
+  "displayName": "eSpeak for VSCode",
+  "publisher": "Izhan",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.106.1"
+  },
+  "activationEvents": [
+    "onCommand:vscode-espeak.speak"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-espeak.speak",
+        "title": "Speak Text"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.106.1",
+    "vscode": "^1.106.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izhank216/espeak-for-vscode/"
+  },
+  "keywords": [
+    "vscode",
+    "extension",
+    "text-to-speech",
+    "eSpeak",
+    "tts"
+  ]
+}
