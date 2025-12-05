@@ -1,3 +1,4 @@
+// https://github.com/kripken/speak.js/blob/master/speakClient.js
 var speakWorker;
 try {
   speakWorker = new Worker('speakWorker.js');
