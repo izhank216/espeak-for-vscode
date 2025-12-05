@@ -1,5 +1,6 @@
 /** @type {import('vscode')} */
 const vscode = require('vscode');
+const path = require('path');
 
 function activate(context) {
     let disposable = vscode.commands.registerCommand('vscode-espeak.speak', async function () {
@@ -22,6 +23,11 @@ function activate(context) {
             }
         );
 
+        // Convert local speakClient.js to a WebView URI
+        const speakjs = panel.webview.asWebviewUri(
+            vscode.Uri.file(path.join(context.extensionPath, 'speakjs', 'speakClient.js'))
+        );
+
         panel.webview.html = `
         <!DOCTYPE html>
         <html>
@@ -36,7 +42,7 @@ function activate(context) {
             <div id="status">eSpeak console:</div>
             <div id="console"></div>
 
-            <script src="https://raw.githubusercontent.com/kripken/speak.js/master/speakClient.js"></script>
+            <script src="${speakjs}"></script>
             <script>
                 const consoleDiv = document.getElementById('console');
                 (function() {
