@@ -1,4 +1,5 @@
 // eSpeak and other code here are under the GNU GPL.
+// https://github.com/kripken/speak.js/blob/master/speakGenerator.js
 function generateSpeech(text, args) {
   var self = { text: text, args: args, ret: null };
   (function() {
