@@ -4,7 +4,7 @@
   "publisher": "Izhan",
   "version": "0.0.1",
   "engines": {
-    "vscode": ">=1.105.1 <2.0.0"
+    "vscode": "^1.105.1"
   },
   "activationEvents": [
     "onCommand:vscode-espeak.speak"
